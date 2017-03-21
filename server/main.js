@@ -3,11 +3,11 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require("path");
 
-var post = (process.env.PORT || 8080);
+var port = (process.env.PORT || 8080);
 var secret = 'hookkey';
 
 var app = express();
-app.set('port', port));
+app.set('port', port);
 
 app.use('/', express.static(__dirname + '/../dist'));
 app.use('/scripts', express.static(__dirname + '/../node_modules'));
