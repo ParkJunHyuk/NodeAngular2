@@ -35,6 +35,9 @@ http.createServer(function(req, res){
       console.log("running hook.sh");
 
       var deploySh = spawn('sh', ['hook.sh']);
+
+      console.log("my key? ", deploySh)
+
       deploySh.stdout.on('data', function(data){
           var buff = new Buffer(data);
           console.log(buff.toString('utf-8'));
