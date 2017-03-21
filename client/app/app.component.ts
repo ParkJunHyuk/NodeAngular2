@@ -5,5 +5,4 @@ import {Component} from "@angular/core";
     template: require('./app.component.html'),
 })
 export class AppComponent{	
-    /* ? 주석이 되나 모르겠네 */
 }
