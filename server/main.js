@@ -1,10 +1,9 @@
 var express = require('express');
-var morgan = require('morgan'); 
+var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require("path");
 
 var port = (process.env.PORT || 8080);
-var secret = 'hookkey';
 
 var app = express();
 app.set('port', port);
