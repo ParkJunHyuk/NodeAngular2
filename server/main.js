@@ -1,12 +1,10 @@
 var express = require('express');
-var morgan = require('morgan');
+var morgan = require('morgan'); 
 var bodyParser = require('body-parser');
 var path = require("path");
 
-var port = (process.env.PORT || 8080);
-
 var app = express();
-app.set('port', port);
+app.set('port', (process.env.PORT || 3000));
 
 app.use('/', express.static(__dirname + '/../dist'));
 app.use('/scripts', express.static(__dirname + '/../node_modules'));
