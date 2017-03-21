@@ -36,8 +36,6 @@ http.createServer(function(req, res){
 
       var deploySh = spawn('sh', ['hook.sh']);
 
-      console.log("my key? ", deploySh)
-
       deploySh.stdout.on('data', function(data){
           var buff = new Buffer(data);
           console.log(buff.toString('utf-8'));
@@ -47,7 +45,6 @@ http.createServer(function(req, res){
     res.writeHead(400, {"Content-Type": "application/json"});
 
     var data = JSON.stringify({"success": true});
-      console.log("success?");
       return res.end(data);
 
     });
