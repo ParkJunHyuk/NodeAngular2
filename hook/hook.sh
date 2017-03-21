@@ -5,4 +5,4 @@ REPOSITORY="../"
 
 cd $REPOSITORY
 
-git pull
+git pull junhyuk master
